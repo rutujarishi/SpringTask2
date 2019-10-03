@@ -11,14 +11,14 @@ public class Config {
 
 
     @Bean
-    @Scope("prototype")
+   // @Scope("prototype")
     public Movie getmovie() {
-        return new Movie(getActor());
+        return new Movie();
     }
     @Bean
         public Actor getActor()
         {
-            return new Actor("Deepika","Female",29);
+            return new Actor();
 
         }
 //    @Bean

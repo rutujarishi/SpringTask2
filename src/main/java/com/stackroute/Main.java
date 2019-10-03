@@ -17,14 +17,7 @@ class Main {
         ApplicationContext factory = new AnnotationConfigApplicationContext(Config.class);
         Movie movie1 = factory.getBean(Movie.class);
         Movie movie2 = factory.getBean(Movie.class);
-        if(movie1==movie2)
-        {
-            System.out.println("true");
-        }
-        else
-        {
-            System.out.println("false");
-        }
+
         movie1.print();
     }
 }

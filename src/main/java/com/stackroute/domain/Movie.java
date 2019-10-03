@@ -1,6 +1,9 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,14 +12,25 @@ import org.springframework.stereotype.Component;
  */
 
 
-public class Movie
+public class Movie 
 {
-
-    public Actor actor;
     @Autowired
-    public Movie(Actor actor) {
+    public Actor actor;
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
         this.actor = actor;
     }
+
+
+//    public Movie(Actor actor) {
+//        this.actor = actor;
+//    }
+
+
 
     public Movie(){
 
@@ -27,6 +41,7 @@ public class Movie
         actor.print();
 
     }
+
 
 
 }
