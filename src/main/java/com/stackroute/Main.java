@@ -1,4 +1,5 @@
 package com.stackroute;
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.*;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -18,8 +19,10 @@ class Main {
 
 
         AbstractApplicationContext factory = new AnnotationConfigApplicationContext(Config.class);
-        Movie movie1 = factory.getBean(Movie.class);
-        movie1.print();
+        BeanLifecycleDemoBean appcontext= (BeanLifecycleDemoBean) factory.getBean(BeanLifecycleDemoBean.class);
+        System.out.println(appcontext);
+
+        factory.close();
 
 //        Movie movie2 = factory.getBean(Movie.class);
 //        if(movie1==movie2)
