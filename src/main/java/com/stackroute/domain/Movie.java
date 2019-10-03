@@ -1,19 +1,18 @@
 package com.stackroute.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * Hello world!
  *
  */
 
-
+@Component
 public class Movie
 {
-@Autowired
+    @Autowired
     Actor actor;
-
-
 
     public void setActor(Actor actor) {
         this.actor = actor;
@@ -24,10 +23,6 @@ public class Movie
     }
     public void print()
     {
-        actor.setName("Deepika");
-        actor.setGender("Female");
-        actor.setAge(29);
-
 
         actor.print();
 
