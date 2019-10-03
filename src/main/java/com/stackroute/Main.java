@@ -16,9 +16,15 @@ class Main {
     {
         ApplicationContext factory = new AnnotationConfigApplicationContext(Config.class);
         Movie movie1 = factory.getBean(Movie.class);
-        movie1.getActor().setName("Deepika");
-        movie1.getActor().setGender("Female");
-        movie1.getActor().setAge(29);
+        Movie movie2 = factory.getBean(Movie.class);
+        if(movie1==movie2)
+        {
+            System.out.println("true");
+        }
+        else
+        {
+            System.out.println("false");
+        }
         movie1.print();
     }
 }

@@ -8,31 +8,25 @@ import org.springframework.stereotype.Component;
  *
  */
 
-@Component
+
 public class Movie
 {
-    @Autowired
-    Actor actor;
 
-    public void setActor(Actor actor) {
+    public Actor actor;
+    @Autowired
+    public Movie(Actor actor) {
         this.actor = actor;
     }
-    public  Actor getActor()
-    {
-        return actor;
-    }
-    public void print()
-    {
 
+    public Movie(){
+
+    }
+
+
+    public void print() {
         actor.print();
 
     }
-
-
-
-
-
-
 
 
 }
