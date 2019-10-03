@@ -6,21 +6,21 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
-
+@ComponentScan("com.stackroute.domain")
 public class Config {
 
 
-    @Bean
-    @Scope("prototype")
-    public Movie getmovie() {
-        return new Movie(getActor());
-    }
-    @Bean
-        public Actor getActor()
-        {
-            return new Actor("Deepika","Female",29);
-
-        }
+//    @Bean
+//    @Scope("prototype")
+//    public Movie getmovie() {
+//        return new Movie();
+//    }
+//    @Bean
+//        public Actor getActor()
+//        {
+//            return new Actor();
+//
+//        }
 //    @Bean
 //    public Actor getActor1()
 //    {
