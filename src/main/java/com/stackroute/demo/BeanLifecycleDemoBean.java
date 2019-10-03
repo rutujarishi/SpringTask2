@@ -6,30 +6,27 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+
 @Component
 public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
-    String message;
 
-    public String getMessage() {
-        return message;
-    }
+    
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
     @PostConstruct
-    public void CustomInit()
+    public void customInit()
     {
-        System.out.println("CustomInit");
+        System.out.println("customInit");
     }
+
     @PreDestroy
-    public void CustomDestroy()
+    public void customDestroy()
     {
-        System.out.println("Destroy");
+        System.out.println("destroy");
     }
+
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("Init method after properties are set : " + message);
+        System.out.println("Init method after properties are set : ");
     }
 
     @Override
