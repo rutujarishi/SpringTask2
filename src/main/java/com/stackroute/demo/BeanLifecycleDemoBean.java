@@ -10,7 +10,7 @@ import javax.annotation.PreDestroy;
 @Component
 public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
 
-    
+
 
     @PostConstruct
     public void customInit()
